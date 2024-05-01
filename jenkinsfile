@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                git branch: 'main', url: 'https://github.com/sanket0770/j1.git'
+            }
+        }
+        
+        stage('run'){
+            steps {
+                bat "test.py"
+            }
+            }
+            }
+        }
